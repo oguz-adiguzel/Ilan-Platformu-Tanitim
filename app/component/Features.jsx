@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Features = () => {
-  // 1. Kategorileri Tanımlayalım
   const categories = [
     { id: "all", name: "Tüm Özellikler" },
     { id: "auth", name: "Güvenlik & Oturum" },
@@ -14,7 +13,6 @@ const Features = () => {
 
   const [activeTab, setActiveTab] = useState("all");
 
-  // 2. Ham Veriyi Kategorize Edilmiş Şekilde Array'e Alalım
   const allFeatures = [
     {
       title: "JWT Tabanlı Login Sistemi",
@@ -174,14 +172,13 @@ const Features = () => {
     },
   ];
 
-  // 3. Seçilen Sekmeye Göre Filtreleme Yapalım
   const filteredFeatures = allFeatures.filter(
     (f) => activeTab === "all" || f.category === activeTab
   );
 
   return (
     <div id="özellikler" className="w-full py-20 bg-gray-950/20">
-      {/* Üst Başlık */}
+
       <div className="container mx-auto flex flex-col items-center text-center px-4">
         <p className="text-xs px-5 py-1 border border-orange-300 text-orange-300 rounded-full select-none">
           Özellikler & Mimari
@@ -194,7 +191,6 @@ const Features = () => {
         </p>
       </div>
 
-      {/* DİNAMİK SEKMELER (TAB BAR) - Mühendislik göstergesi alan */}
       <div className="container mx-auto flex flex-wrap justify-center items-center gap-3 mt-12 px-4 select-none">
         {categories.map((tab) => (
           <button
@@ -216,7 +212,6 @@ const Features = () => {
         ))}
       </div>
 
-      {/* 21 KARTIN RENDER EDİLDİĞİ ALAN (Kategoriye göre süzülür ve canlanır) */}
       <motion.div 
         layout
         className="mt-12 container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-12"
@@ -232,7 +227,6 @@ const Features = () => {
               key={item.title}
               className="border border-gray-800/80 rounded-2xl p-6 bg-gray-900/40 backdrop-blur-sm relative flex flex-col justify-between hover:border-orange-400/40 hover:shadow-[0_0_20px_rgba(253,186,116,0.03)] duration-300 transition-all group overflow-hidden"
             >
-              {/* Arka plan parlama efekti (Glow Effect) */}
               <div className="absolute -inset-px bg-gradient-to-br from-orange-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none" />
 
               <div>

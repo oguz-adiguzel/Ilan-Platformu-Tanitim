@@ -5,18 +5,16 @@ import { IoIosLock } from "react-icons/io";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  // Alt elemanların sırayla gelmesini sağlayan container animasyon varyantı
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15, // Elemanlar arası 0.15 saniye gecikme
+        staggerChildren: 0.15,
       },
     },
   };
 
-  // İstediğin: Küçükten kendi boyutuna doğru büyüyerek gelen başlık varyantı
   const titleVariants = {
     hidden: { opacity: 0, scale: 0.6 },
     visible: {
@@ -31,7 +29,6 @@ const Hero = () => {
     },
   };
 
-  // Metinler ve butonlar için yukarı doğru süzülme varyantı
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -41,7 +38,6 @@ const Hero = () => {
     },
   };
 
-  // Tarayıcı Mockup'ı için özel dipten gelme efekti
   const mockupVariants = {
     hidden: { opacity: 0, y: 60, scale: 0.95 },
     visible: {
@@ -60,7 +56,6 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        {/* Üst Rozet */}
         <motion.div
           className="w-80 flex items-center justify-center py-1 text-xs border rounded-full text-orange-300 shadow-2xl animate-bounce"
           variants={fadeInUpVariants}
@@ -68,7 +63,6 @@ const Hero = () => {
           <p>Next.js + Node.js + Redis Gücüyle Optimize Edildi</p>
         </motion.div>
 
-        {/* BAŞLIK ALANI */}
         <div className="mt-10 text-center select-none">
           <motion.h1
             className="text-6xl lg:text-7xl text-white font-semibold font-serif text-shadow-lg text-shadow-black leading-tight"
@@ -87,7 +81,6 @@ const Hero = () => {
           </motion.h2>
         </div>
 
-        {/* Alt Metin Paragrafları */}
         <motion.div className="text-center mt-6" variants={fadeInUpVariants}>
           <p className="text-gray-400 text-shadow-sm text-shadow-orange-300">
             Gelişmiş filtreleme motoru dinamik kurumsal/bireysel rozet
@@ -101,7 +94,6 @@ const Hero = () => {
           </p>
         </motion.div>
 
-        {/* İSTEDİĞİN BUTONLAR BÖLÜMÜ - CİLALANMIŞ VE PÜRÜZSÜZLEŞTİRİLMİŞ HALİ */}
         <motion.div
           className="flex flex-col sm:flex-row items-center gap-4 sm:gap-9 mt-10 w-full sm:w-auto px-6"
           variants={fadeInUpVariants}
@@ -131,7 +123,6 @@ const Hero = () => {
           </motion.a>
         </motion.div>
 
-        {/* Özellik Check Listeleri */}
         <motion.div
           className="flex items-center space-x-4 mt-8"
           variants={fadeInUpVariants}
@@ -151,7 +142,6 @@ const Hero = () => {
         </motion.div>
       </motion.div>
 
-      {/* Tarayıcı Ekran Görüntüsü Mockup Katmanı */}
       <motion.div
         className="w-full lg:w-2/3 mx-auto mt-12 lg:mt-28 border border-gray-500 rounded-2xl shadow-2xl shadow-orange-300"
         initial="hidden"

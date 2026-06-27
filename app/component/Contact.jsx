@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  // Başlık ve alt metinler için süzülme varyantı
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -13,18 +12,16 @@ const Contact = () => {
     },
   };
 
-  // Kartların grid kapsayıcısı için stagger (sıralı tetikleme) varyantı
   const gridVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Her kart 0.2 saniye arayla soldan sağa açılır
+        staggerChildren: 0.2,
       },
     },
   };
 
-  // Kartların soldan sağa doğru tatlı bir ivmeyle tırmanma varyantı
   const cardVariants = {
     hidden: { opacity: 0, x: -30, y: 20 },
     visible: {
@@ -39,7 +36,6 @@ const Contact = () => {
     },
   };
 
-  // Butonların en son aşağıdan pürüzsüzce belirmesi için varyant
   const buttonVariants = {
     hidden: { opacity: 0, scale: 0.9, y: 20 },
     visible: {
@@ -47,7 +43,7 @@ const Contact = () => {
       scale: 1,
       y: 0,
       transition: {
-        delay: 0.7, // Kartlar açıldıktan hemen sonra tetiklenir
+        delay: 0.7, 
         duration: 0.5,
         ease: "easeOut",
       },
@@ -56,7 +52,6 @@ const Contact = () => {
 
   return (
     <div id="teknik-sunum" className="w-full py-20 bg-gray-900 overflow-hidden">
-      {/* Üst Başlık Alanı */}
       <motion.div
         className="container mx-auto flex flex-col items-center text-center px-4"
         initial="hidden"
@@ -77,7 +72,6 @@ const Contact = () => {
         </p>
       </motion.div>
 
-      {/* 3'lü Süreç Adımları (Grid) */}
       <motion.div
         className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-32 mt-14"
         initial="hidden"
@@ -85,7 +79,6 @@ const Contact = () => {
         viewport={{ once: true, margin: "-50px" }}
         variants={gridVariants}
       >
-        {/* Adım 01 */}
         <motion.div
           className="border border-gray-800 rounded-2xl px-6 py-5 bg-gray-950/40 backdrop-blur-sm shadow-xl shadow-orange-300/5 hover:border-orange-400/50 duration-300"
           variants={cardVariants}
@@ -103,7 +96,6 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        {/* Adım 02 */}
         <motion.div
           className="border border-gray-800 rounded-2xl px-6 py-5 bg-gray-950/40 backdrop-blur-sm shadow-xl shadow-orange-300/5 hover:border-orange-400/50 duration-300"
           variants={cardVariants}
@@ -120,7 +112,6 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        {/* Adım 03 */}
         <motion.div
           className="border border-gray-800 rounded-2xl px-6 py-5 bg-gray-950/40 backdrop-blur-sm shadow-xl shadow-orange-300/5 hover:border-orange-400/50 duration-300"
           variants={cardVariants}
@@ -139,7 +130,6 @@ const Contact = () => {
         </motion.div>
       </motion.div>
 
-      {/* Aksiyon Butonları */}
       <motion.div
         className="container mx-auto flex items-center justify-center space-x-6 md:space-x-10 mt-14"
         initial="hidden"

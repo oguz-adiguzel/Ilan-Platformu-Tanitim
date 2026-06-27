@@ -5,7 +5,6 @@ import { IoIosMail } from "react-icons/io";
 import { motion } from "framer-motion";
 
 const Footer = () => {
-  // Pürüzsüz Kaydırma Fonksiyonu
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -20,14 +19,11 @@ const Footer = () => {
 
   return (
     <footer className="w-full pt-24 pb-8 bg-gray-900 border-t border-gray-900/60 relative overflow-hidden">
-      {/* Arka Plan Hafif Işık Süzmesi */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[150px] bg-orange-500/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-16 lg:px-24">
-        {/* ÜST GRUP: Logo, Açıklama ve Linkler */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-gray-900 pb-12">
           
-          {/* Sol Blok: Logo ve Misyon */}
           <div className="lg:col-span-5 flex flex-col items-start">
             <motion.img 
               className="w-56 h-auto cursor-pointer" 
@@ -44,9 +40,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Sağ Blok: Link Kolonları (12'li grid sistemine göre hizalandı) */}
           <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
-            {/* Kolon 1: Proje */}
             <div className="flex flex-col">
               <span className="text-white font-semibold text-xs tracking-widest uppercase font-mono">PROJE</span>
               <ul className="mt-4 space-y-2.5 text-sm text-gray-400 font-light">
@@ -56,7 +50,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Kolon 2: Mimari */}
             <div className="flex flex-col">
               <span className="text-white font-semibold text-xs tracking-widest uppercase font-mono">MİMARİ</span>
               <ul className="mt-4 space-y-2.5 text-sm text-gray-400 font-light">
@@ -66,7 +59,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Kolon 3: Yasal & İletişim */}
             <div className="flex flex-col col-span-2 sm:col-span-1">
               <span className="text-white font-semibold text-xs tracking-widest uppercase font-mono">YASAL</span>
               <ul className="mt-4 space-y-2.5 text-sm text-gray-400 font-light">
@@ -81,13 +73,11 @@ const Footer = () => {
 
         </div>
 
-        {/* ALT GRUP: Telif ve Sosyal Medya İkonları */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-xs font-light text-center sm:text-left tracking-wide">
             © {new Date().getFullYear()} Oğuz Adıgüzel. Tüm hakları saklıdır.
           </p>
           
-          {/* Sosyal Medya İkon Grubu */}
           <div className="flex items-center space-x-4">
             <motion.a 
               href="https://linkedin.com/in/oğuz-adıgüzel/" target="_blank" rel="noreferrer"
