@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Yeni Nesil Otomobil Ticareti 
 
-First, run the development server:
+Otomobil ticaretinde yüksek performans, dinamik rol yönetimi ve pürüzsüz kullanıcı deneyimi sunmak üzere tasarlanmış, **Next.js App Router**, **Node.js (Express)**, **Redis Cache** ve **MongoDB** mimarisi üzerine kurulu kurumsal tabanlı bir SaaS platformudur.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Platform, yüksek frekanslı veri trafiğini sıfır gecikmeyle işlemek ve gelişmiş arama/filtreleme motorlarıyla en optimize ilan deneyimini sunmak için özel olarak optimize edilmiştir.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Özellikler
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js Core Architecture & SEO Uyumlu:** App Router mimarisi ile sunucu taraflı listeleme (SSR), dinamik metadata ve SEO optimizasyonu.
+- **Redis Caching Engine:** Sık sorgulanan ilan verileri, filtreleme parametreleri ve ana sayfa vitrini için yüksek hızlı Redis önbelleğe alma katmanı.
+- **Rol Tabanlı Dinamik Galeri Yönetimi:** Kurumsal galeriler, bireysel satıcılar ve sistem yöneticileri (Admin Dashboard) için izole edilmiş yetkilendirme ve rol yönetimi.
+- **Real-time Canlı Mesajlaşma:** Alıcı ve satıcılar arasında anlık, WebSocket (Socket.io) tabanlı güvenli sohbet arayüzü.
+- **Esnek NoSQL Veri Modeli:** MongoDB ve Mongoose ile araç teknik spesifikasyonları, paketler ve kullanıcı verileri için genişletilebilir veri şeması.
+- **Premium İnteraktif Arayüz:** Framer Motion, Tailwind CSS ve entegre Tarayıcı Mockup Galerisi ile akıcı, modern ve etkileşimli kullanıcı deneyimi.
+## Teknolojiler
 
-## Learn More
+**Client:** Nextjs, TailwindCSS, MaterialUI, Swiper, Socket.io
 
-To learn more about Next.js, take a look at the following resources:
+**Server:** Node, Express, Node-Cron, JWT, MongoDB, Mongoose
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
